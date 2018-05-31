@@ -15,6 +15,7 @@ blocks:
           commands:
             - echo "This is from second job"
             - ls /etc
+            - cat /tmp/*
             
   - name: "Stage 2"
     build:
