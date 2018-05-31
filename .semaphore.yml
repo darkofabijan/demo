@@ -14,7 +14,7 @@ blocks:
         - name: 2nd job from 1st block
           commands:
             - echo "This is from second job"
-            - for i in {1..5000}; do echo $i; done
+            - ls /etc
   - name: "Stage 2"
     build:
       jobs:
