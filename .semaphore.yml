@@ -15,6 +15,7 @@ blocks:
           commands:
             - echo "This is from second job"
             - ls /etc
+            
   - name: "Stage 2"
     build:
       jobs:
@@ -28,6 +29,7 @@ blocks:
           commands:
             - echo "This is from second job"
             - ls /etc
+            
   - name: "Stage 3"
     build:
       jobs:
@@ -41,6 +43,7 @@ blocks:
           commands:
             - echo "This is from second job"
             - ls /etc            
+            
   - name: "Stage 4"
     build:
       jobs:
