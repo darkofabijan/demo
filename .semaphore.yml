@@ -7,9 +7,12 @@ blocks:
         - name: Job from 1st block
           commands:
             - echo $SEMAPHORE_PIPELINE_ID
+            - echo "First job 1"
+            - echo "First job 2"
+            - echo "First job 3"
         - name: 2nd job from 1st block
           commands:
-            - echo This is from second job
+            - echo "This is from second job"
             - for i in {1..5000}; do echo $i; done
   - build:
       jobs:
