@@ -18,12 +18,38 @@ blocks:
   - name: "Stage 2"
     build:
       jobs:
+        - name: Job from 1st block
+          commands:
+            - echo $SEMAPHORE_PIPELINE_ID
+            - echo "First job 1"
+            - echo "First job 2"
+            - echo "First job 3"
+        - name: 2nd job from 1st block
+          commands:
+            - echo "This is from second job"
+            - ls /etc
+  - name: "Stage 3"
+    build:
+      jobs:
+        - name: Job from 1st block
+          commands:
+            - echo $SEMAPHORE_PIPELINE_ID
+            - echo "First job 1"
+            - echo "First job 2"
+            - echo "First job 3"
+        - name: 2nd job from 1st block
+          commands:
+            - echo "This is from second job"
+            - ls /etc            
+  - name: "Stage 4"
+    build:
+      jobs:
         - name: Job from 2nd block
           commands:
             - echo $SEMAPHORE_PIPELINE_ID
             - "false"
             - echo bar2
-  - name: "Stage 3"
+  - name: "Stage 4"
     build:
       jobs:
         - name: Job from 3rd block
