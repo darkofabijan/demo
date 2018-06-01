@@ -11,11 +11,11 @@ blocks:
             - echo "First job 1"
             - echo "First job 2"
             - echo "First job 3"
+            - cat /proc/cpuinfo
         - name: 2nd job from 1st block
           commands:
             - echo "This is from second job"
             - ls /etc
-            - cat /tmp/*
             
   - name: "Stage 2"
     build:
