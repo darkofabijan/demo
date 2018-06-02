@@ -14,6 +14,15 @@ blocks:
             - cat /proc/cpuinfo
         - name: 2nd job from 1st block
           commands:
+            - sudo gem install lolcat
+            - sudo npm install -g cowsay
+            - cowthink -r JavaScript FTW! | lolcat
+            - cowthink -r JavaScript FTW! | lolcat
+            - cowthink -r JavaScript FTW! | lolcat
+            - cowthink -r JavaScript FTW! | lolcat
+            - cowthink -r JavaScript FTW! | lolcat
+            - cowthink -r JavaScript FTW! | lolcat
+            - cowthink -r JavaScript FTW! | lolcat            
             - echo "This is from second job"
             - ls /etc
         - name: Looooping
