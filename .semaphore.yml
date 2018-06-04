@@ -62,5 +62,5 @@ blocks:
       jobs:
         - name: Job from 3rdd block
           commands:
-            - echo foo3d
+            - echo foo3ds
             - echo bar3dddds
