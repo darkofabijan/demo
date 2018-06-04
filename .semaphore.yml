@@ -60,7 +60,7 @@ blocks:
   - name: "Stage 5"
     build:
       jobs:
-        - name: Job from 3rd block
+        - name: Job from 3rdd block
           commands:
             - echo foo3d
             - echo bar3dddds
