@@ -7,6 +7,8 @@ blocks:
       jobs:
         - name: Job from 1st block
           commands:
+            - env | grep "SEMAPHORE"
+            - env
             - echo $SEMAPHORE_PIPELINE_ID
             - echo "First job 1"
             - echo "First job 2"
