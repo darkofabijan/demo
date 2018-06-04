@@ -14,17 +14,6 @@ blocks:
             - cat /proc/cpuinfo
         - name: 2nd job from 1st block
           commands:
-            - curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
-            - sudo apt-get install -y nodejs
-            - sudo gem install lolcat
-            - sudo npm install -g cowsay
-            - cowthink -r JavaScript FTW! | lolcat
-            - cowthink -r JavaScript FTW! | lolcat
-            - cowthink -r JavaScript FTW! | lolcat
-            - cowthink -r JavaScript FTW! | lolcat
-            - cowthink -r JavaScript FTW! | lolcat
-            - cowthink -r JavaScript FTW! | lolcat
-            - cowthink -r JavaScript FTW! | lolcat            
             - echo "This is from second job"
             - ls /etc
         - name: Looooping
