@@ -1,5 +1,5 @@
 version: "v3.0"
-name: bump, 3 blocks YAML file . Only first 2 blocks will be  because second block will fail.
+name: bump, 3 blocks  file . Only first 2 blocks will be  because second block will fail.
 semaphore_image: standard
 blocks:
   - name: "Stage 1"
