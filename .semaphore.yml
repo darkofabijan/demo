@@ -1,5 +1,5 @@
 version: "v3.0"
-name: bump, test blocks  file . Only firsdt 2 blocks will be  because second  will fail.
+name: bump, test blocks  file . Only firsdt 2 blocks will be  ddbecause second  will fail.
 semaphore_image: standard
 blocks:
   - name: "Stage 1"
