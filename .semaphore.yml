@@ -61,4 +61,4 @@ blocks:
         - name: Job from 3rd block
           commands:
             - echo foo3
-            - echo bar3
+            - echo bar3d 
