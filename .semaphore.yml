@@ -14,10 +14,14 @@ blocks:
             - echo "First job 2"
             - echo "First job 3"
             - cat /proc/cpuinfo
+            - ls /
+            
+            
         - name: 2nd job from 1st block
           commands:
             - echo "This is from second job"
             - ls /etc
+            
         - name: Looooping
           commands:
             - for((i=1;i<=10000;i+=2)); do echo "Welcome $i times"; done
@@ -41,6 +45,7 @@ blocks:
       jobs:
         - name: Job from 1st block
           commands:
+            - restore_cache --key "mdb(Gemfile.lock)"
             - echo $SEMAPHORE_PIPELINE_ID
             - echo "First job 1"
             - echo "First job 2"
