@@ -20,15 +20,9 @@ blocks:
             - ls /
             - echo "test"
             
-            
-        - name: 2nd job from 1st block
-          commands:
-            - checkout
-            - echo "This is from second job"
-            - ls /etc
-            
         - name: Looooping
           commands:
+            - checkout
             - for((i=1;i<=10000;i+=2)); do echo "Welcome $i times"; done
             
   - name: "Stage 2"
@@ -40,17 +34,12 @@ blocks:
             - echo "First job 1"
             - echo "First job 2"
             - echo "First job 3"
-        - name: 2nd job from 1st block
-          commands:
-            - echo "This is from second job"
-            - ls -lah /etc
             
   - name: "Stage 3"
     build:
       jobs:
         - name: Job from 1st block
           commands:
-            - restore_cache --key "mdb(Gemfile.lock)"
             - echo $SEMAPHORE_PIPELINE_ID
             - echo "First job 1"
             - echo "First job 2"
