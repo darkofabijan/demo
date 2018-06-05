@@ -7,6 +7,8 @@ blocks:
       jobs:
         - name: Job from 1st block
           commands:
+            - git clone $SEMAPHORE_GIT_URL
+            - git reset -q --hard $SEMAPHORE_GIT_REVISION
             - pwd
             - ls -lah ~
             - env | grep "SEMAPHORE"
