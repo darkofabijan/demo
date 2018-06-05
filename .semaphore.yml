@@ -15,6 +15,7 @@ blocks:
             - echo "First job 3"
             - cat /proc/cpuinfo
             - ls /
+            - echo "test"
             
             
         - name: 2nd job from 1st block
