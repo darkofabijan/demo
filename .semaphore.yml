@@ -7,12 +7,9 @@ blocks:
       jobs:
         - name: Job from 1st block
           commands:
-            - git clone $SEMAPHORE_GIT_URL $SEMAPHORE_PROJECT_DIR
-            - cd $SEMAPHORE_PROJECT_DIR
-            - git reset -q --hard $SEMAPHORE_GIT_REVISION
+            - checkout
             - pwd
             - ls -lah
-            - ls -lah ~
             - env | grep "SEMAPHORE"
             - env
             - echo $SEMAPHORE_PIPELINE_ID
@@ -26,6 +23,7 @@ blocks:
             
         - name: 2nd job from 1st block
           commands:
+            - checkout
             - echo "This is from second job"
             - ls /etc
             
