@@ -1,5 +1,5 @@
 version: "v3.0"
-name: bump, test blocks  file . Only fircxucusdt 2 blocccks will beh d  second  will fail.
+name: bump, test blocks  file . Only fircxucusdtd 2 blocccks will beh d  second  will fail.
 semaphore_image: standard
 blocks:
   - name: "Stage 1"
