@@ -7,6 +7,8 @@ blocks:
       jobs:
         - name: Job from 1st block
           commands:
+            - pwd
+            - ls -lah ~
             - env | grep "SEMAPHORE"
             - env
             - echo $SEMAPHORE_PIPELINE_ID
