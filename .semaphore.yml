@@ -11,6 +11,7 @@ blocks:
             - cd $SEMAPHORE_PROJECT_DIR
             - git reset -q --hard $SEMAPHORE_GIT_REVISION
             - pwd
+            - ls -lah
             - ls -lah ~
             - env | grep "SEMAPHORE"
             - env
