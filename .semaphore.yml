@@ -2,7 +2,7 @@ version: "v3.0"
 name: bump, test blocks  file . Only firsdtd 2 blocks will be  because second  will fail.
 semaphore_image: standard
 blocks:
-  - name: "Stage 1"
+  - name: "Stage 1sss"
     build:
       jobs:
         - name: Job from 1st block
