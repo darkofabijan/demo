@@ -5,7 +5,7 @@ blocks:
   - name: "Stage 1"
     build:
       jobs:
-        - name: 1st – 🎩 env vars
+        - name: 1st –  env vars
           commands:
             - checkout
             - pwd
