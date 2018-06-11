@@ -36,7 +36,7 @@ blocks:
             - echo "First job 2"
             - echo "First job 3"
             
-  - name: "Stage 3 🧝‍♂️"
+  - name: "Stage  3 🧝‍♂️"
     build:
       jobs:
         - name: Job from 1st block 🦄
