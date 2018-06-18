@@ -9,6 +9,8 @@ blocks:
           commands:
             - checkout
             - pwd
+            - echo "cache restore --key=v1-bundle-$(md5 Gemfile.lock),v1-bundle-"
+            - echo "bundle install --path=vendor/bundle"
             - ls -lah
             - env | grep "SEMAPHORE_GIT"
             - env | grep "SEMAPHORE"
@@ -20,6 +22,7 @@ blocks:
             - cat /proc/cpuinfo
             - ls /
             - echo "test"
+            - echo "cache store --key=v1-bundle-$(md5 Gemfile.lock) --path=vendor/bundle"
             
         - name: Looooping 🔁
           commands:
@@ -42,6 +45,7 @@ blocks:
         - name: Job from 1st block 🦄
           commands:
             - echo $SEMAPHORE_PIPELINE_ID
+            - echo "cache restore --key=v1-bundle-$(md5 Gemfile.lock)"
             - echo "First job 1"
             - echo "First job 2"
             - echo "First job 3"
