@@ -4,14 +4,15 @@ semaphore_image: standard
 blocks:
   - name: "Block 1"
     build:
+      prologue:
+        commands:
+          - echo $SEMAPHORE_JOB_ID
+      epilogue:
+        commands:
+          - echo $SEMAPHORE_JOB_RESULT      
       jobs:
         - name: First job ㍊xy
-          prologue:
-            commands:
-            - echo $SEMAPHORE_JOB_ID
-          epilogue:
-            commands:
-            - echo $SEMAPHORE_JOB_RESULT            
+      
           commands:
             - checkout
             - pwd
