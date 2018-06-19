@@ -2,10 +2,16 @@ version: "v3.0"
 name: Amazing pipeline
 semaphore_image: standard
 blocks:
-  - name: "Stage 1 1️⃣"
+  - name: "Block 1"
     build:
       jobs:
         - name: First job ㍊xy
+          prologue:
+            commands:
+            - echo $SEMAPHORE_JOB_ID
+          epilogue:
+            commands:
+            - echo $SEMAPHORE_JOB_RESULT            
           commands:
             - checkout
             - pwd
@@ -29,7 +35,12 @@ blocks:
             - checkout
             - for((i=1;i<=10000;i+=2)); do echo "Welcome $i times"; done
             
-  - name: "Stage 2 🧝‍♀️"
+        - name: New job
+          commands:
+            - checkout
+            - ls /tmp           
+            
+  - name: "Block 2 🧝‍♀️"
     build:
       jobs:
         - name: Job from 1st block
@@ -39,7 +50,7 @@ blocks:
             - echo "First job 2"
             - echo "First job 3"
             
-  - name: "Stage  3 🧝‍♂️"
+  - name: "Block  3 🧝‍♂️"
     build:
       jobs:
         - name: Job from 1st block 🦄
@@ -54,14 +65,14 @@ blocks:
             - echo "This is from second job"
             - ls /etc            
             
-  - name: "Stage 4"
+  - name: "BLock 4"
     build:
       jobs:
         - name: Job from 2nd block
           commands:
             - echo $SEMAPHORE_PIPELINE_ID
             - echo bar2
-  - name: "Stage 5"
+  - name: "Block 5"
     build:
       jobs:
         - name: Job from 3rdd block
