@@ -1,5 +1,5 @@
 version: "v3.0"
-name: Amazing pipeline xxy
+name: Amazing pipeline xxyz
 semaphore_image: standard
 blocks:
   - name: "Block 1"
