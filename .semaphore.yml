@@ -14,6 +14,7 @@ blocks:
         - name: First job ㍊xy
       
           commands:
+            - cat /opt/change-python-version.sh
             - cat /home/runner/.bash_profile
             - ls /usr/bin | grep checkout
             - ls /usr/bin/libcheckout
