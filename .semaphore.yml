@@ -14,12 +14,6 @@ blocks:
         - name: First job ㍊xy
       
           commands:
-            - cat /opt/change-python-version.sh
-            - cat /home/runner/.bash_profile
-            - ls /usr/bin | grep checkout
-            - ls /usr/bin/libcheckout
-            - cat /usr/bin/libcheckout
-            - source /usr/bin/libcheckout
             - checkout
             - pwd
             - echo "cache restore --key=v1-bundle-$(md5 Gemfile.lock),v1-bundle-"
