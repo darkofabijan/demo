@@ -17,6 +17,7 @@ blocks:
             - ls /usr/bin | grep checkout
             - ls /usr/bin/libcheckout
             - cat /usr/bin/libcheckout
+            - source /usr/bin/libcheckout
             - which checkout
             - checkout
             - pwd
@@ -37,6 +38,7 @@ blocks:
             
         - name: Looooping 🔁
           commands:
+            - which checkout
             - checkout
             - for((i=1;i<=10000;i+=2)); do echo "Welcome $i times"; done
             
