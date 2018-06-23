@@ -14,6 +14,7 @@ blocks:
         - name: First job ㍊xy
       
           commands:
+            - which checkout
             - checkout
             - pwd
             - echo "cache restore --key=v1-bundle-$(md5 Gemfile.lock),v1-bundle-"
