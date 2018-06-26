@@ -1,5 +1,5 @@
 version: "v3.0"
-name: Amazing pipeline ddddugug gjhgk
+name: Amazing pipeline ddddugugsdfs gjhgk
 semaphore_image: standard
 blocks:
   - name: "Block 1"
