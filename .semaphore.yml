@@ -80,3 +80,9 @@ blocks:
           commands:
             - echo foo3dds
             - echo bar3dddds
+
+switch:
+  - name: Deploy to production
+    pipeline: config/production-deploymeent.yml
+  - name: Deploy to Staging
+    pipeline: config/production-staging.yml    
